@@ -1,0 +1,5 @@
+// Copy this file to Config/Luciq.xcconfig and put your real token in it.
+// Luciq.xcconfig is gitignored: an app token in git history is irreversible.
+//
+// Find the token: https://dashboard.luciq.ai → Settings → SDK Integration
+LUCIQ_APP_TOKEN =

@@ -16,6 +16,11 @@
 	     Declaring it here stops App Store Connect asking on every upload. -->
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<!-- Supplied at build time from Config/Luciq.xcconfig, which is gitignored
+	     so the token never enters git history. Empty on a fresh clone, which
+	     makes Observability.start() skip cleanly. -->
+	<key>LuciqAppToken</key>
+	<string>$(LUCIQ_APP_TOKEN)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-SemiBold.ttf</string>

@@ -7,6 +7,10 @@ struct SplitmeApp: App {
     @State private var notifications = NotificationCoordinator()
 
     init() {
+        // Must be the first statement: anything that crashes during start-up
+        // after this point is captured and reported.
+        Observability.start()
+
         GoingOutReminders.registerCategories()
     }
 

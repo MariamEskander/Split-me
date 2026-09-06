@@ -58,22 +58,35 @@ searches when the user taps the nearby-places button.
 
 ## App Privacy questionnaire
 
-Answer: **"No, we do not collect data from this app."**
+> ⚠️ **Changed when the Luciq SDK was added.** The answer is no longer "we do
+> not collect data". Declare these three, all **not linked to identity** and
+> **not used for tracking**, purpose **App Functionality**:
+>
+> - **Crash Data**
+> - **Performance Data**
+> - **Other Diagnostic Data**
+>
+> These match `PrivacyInfo.xcprivacy` exactly. A mismatch between the
+> questionnaire and the manifest is a rejection.
 
-That is accurate and covers every category. For the record, if a reviewer
-queries it:
+Everything else is still collected-nothing:
 
 - Bills, items, people, groups and the essentials list are in an on-device
   SwiftData store and never leave the device.
 - Receipt images are processed on-device by Vision and are neither stored nor
   transmitted; only the confirmed items and the recognised text are saved.
 - Location is used on-device only, as described above.
-- No analytics SDK, no crash reporter, no advertising identifier, no third-party
-  SDKs of any kind.
+- No advertising identifier, no ad SDK, no tracking.
+- One third-party SDK: **Luciq** (mobile observability — crash reporting, bug
+  reports, performance). It sends diagnostics, never bill contents. Screenshots
+  are captured only for bug reports the user deliberately submits; crashes and
+  session replay record steps without images, because this app's screens show
+  people's names and what they owe.
 
-The bundled `PrivacyInfo.xcprivacy` matches these answers: no tracking, no
-collected data types, and `NSPrivacyAccessedAPICategoryUserDefaults` declared
-with reason `CA92.1` (language choice, home coordinate, cached rate snapshot).
+The bundled `PrivacyInfo.xcprivacy` matches these answers: no tracking,
+the three diagnostic types above, and `NSPrivacyAccessedAPICategoryUserDefaults`
+declared with reason `CA92.1` (language choice, home coordinate, cached rate
+snapshot).
 
 ## Age Rating questionnaire
 
