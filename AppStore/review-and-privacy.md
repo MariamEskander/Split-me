@@ -78,10 +78,10 @@ Everything else is still collected-nothing:
 - Location is used on-device only, as described above.
 - No advertising identifier, no ad SDK, no tracking.
 - One third-party SDK: **Luciq** (mobile observability — crash reporting, bug
-  reports, performance). It sends diagnostics, never bill contents. Screenshots
-  are captured only for bug reports the user deliberately submits; crashes and
-  session replay record steps without images, because this app's screens show
-  people's names and what they owe.
+  reports, performance). Repro steps are captured with screenshots for both bug
+  reports and crashes, so a screenshot may include item names, amounts and the
+  names the user typed for the people they split with. Declared accordingly
+  below.
 
 The bundled `PrivacyInfo.xcprivacy` matches these answers: no tracking,
 the three diagnostic types above, and `NSPrivacyAccessedAPICategoryUserDefaults`

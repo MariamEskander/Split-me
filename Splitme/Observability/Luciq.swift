@@ -50,18 +50,18 @@ enum Observability {
         }
     }
 
-    /// Screenshots of this app show real bills: what people ate, what they
-    /// owe, and their names. So screenshots are captured **only** for bug
-    /// reports, which the user starts deliberately and can review before
-    /// sending. Crashes and session replay record the steps without images —
-    /// enough to reproduce a bug, without silently shipping someone's dinner
-    /// receipt to a dashboard.
+    /// Repro steps with screenshots for both bug reports and crashes.
     ///
-    /// Change `.allCrashes` to `.enable` if crash screenshots prove necessary,
-    /// but treat that as a privacy decision, not a debugging convenience.
+    /// Note what this means for this app: crash screenshots are captured
+    /// automatically, so a crash on the Shares tab ships an image of who owes
+    /// what, with names. That is a deliberate choice for debugging value over
+    /// minimal capture.
+    ///
+    /// If that becomes uncomfortable, the fix is auto-masking rather than
+    /// turning screenshots off — the SDK can mask all text, all images, or
+    /// everything, and individual views can be marked private:
+    /// https://docs.luciq.ai/ios/setup-luciq-for-ios/custom-settings/privacy-settings/repro-steps
     private static func configureScreenshotMasking() {
-        Luciq.setReproStepsFor(.bug, with: .enable)
-        Luciq.setReproStepsFor(.allCrashes, with: .enabledWithNoScreenshots)
-        Luciq.setReproStepsFor(.sessionReplay, with: .enabledWithNoScreenshots)
+        Luciq.setReproStepsFor(.all, with: .enable)
     }
 }
