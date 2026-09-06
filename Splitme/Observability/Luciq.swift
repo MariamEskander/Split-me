@@ -25,9 +25,12 @@ enum Observability {
             return
         }
 
-        // Shake to report is discoverable without putting a button over the UI;
-        // the floating button would sit on top of the bill being split.
-        Luciq.start(withToken: appToken, invocationEvents: [.shake, .screenshot])
+        // The floating button is the only *visible* entry point — without it
+        // there is no SDK UI on screen at all, which makes the integration look
+        // broken even when it is running. Shake and screenshot are kept as the
+        // quieter paths.
+        Luciq.start(withToken: appToken,
+                    invocationEvents: [.floatingButton, .shake, .screenshot])
 
         configureNetworkMasking()
         configureScreenshotMasking()
