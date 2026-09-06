@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Split Me — Support</title>
+<meta name="description" content="Support and help for Split Me, the receipt-scanning bill splitter.">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="logo.png" alt="Split Me">
+    <h1>Split Me</h1>
+    <p class="tagline">Split. Settle. Done.</p>
+  </header>
+
+  <p>Split Me scans a receipt, works out who ordered what, and tells each person
+  exactly what they owe — tax and service included. Everything happens on your
+  phone.</p>
+
+  <h2>Support</h2>
+  <div class="card">
+    <p>Questions, bugs, or a receipt it read badly? Email
+    <a href="mailto:REPLACE-WITH-YOUR-EMAIL@example.com">REPLACE-WITH-YOUR-EMAIL@example.com</a>.</p>
+    <p>If a receipt was misread, a photo of it helps enormously — the reader is
+    rule-based, so a real example is what makes it better.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <h3>How does the scanning work? Is my receipt uploaded anywhere?</h3>
+  <p>No. Receipts are read by Apple's on-device text recogniser. The photo is
+  never uploaded and is not kept — only the items you confirm are saved. There is
+  no AI service and no server involved.</p>
+
+  <h3>It read an item wrong.</h3>
+  <p>Every scan opens a review screen first, precisely because paper receipts are
+  creased, faded and inconsistent. Fix any name or price there, untick anything
+  that isn't an item, and add anything it missed, before it reaches the bill.</p>
+
+  <h3>Why does it ask for my location?</h3>
+  <p>Two separate, optional things. <strong>While using the app</strong> lets it
+  suggest nearby restaurants when naming a bill. <strong>Always</strong> is only
+  for the Essentials reminder — noticing you have left home requires iOS to check
+  in the background. Refuse either and the app still works; the reminder falls
+  back to a daily one at a time you choose.</p>
+
+  <h3>Are the tax and service calculations right for restaurants here?</h3>
+  <p>Yes — both conventions are supported. If menu prices exclude tax and
+  service, they are added to the subtotal and split in proportion to what each
+  person ordered. If prices already include them, nothing is added twice.</p>
+
+  <h3>Do the shares always add up?</h3>
+  <p>Always. Money is handled in whole piastres, and leftover pennies are handed
+  out one at a time rather than rounded away, so the shares total the bill
+  exactly.</p>
+
+  <h3>Can I use it in Arabic?</h3>
+  <p>Yes. Tap the globe in the top corner to switch between English and Egyptian
+  Arabic, with full right-to-left layout. The receipt reader also handles Arabic
+  receipts and Arabic-Indic numerals.</p>
+
+  <h3>Where do the exchange rates come from?</h3>
+  <p>The open endpoint of <a href="https://www.exchangerate-api.com">exchangerate-api.com</a>,
+  which updates daily. Rates are cached on your device with the date they were
+  published, so the converter still works offline and always tells you how old
+  its numbers are.</p>
+
+  <h2>Privacy</h2>
+  <p>Split Me collects nothing at all. The full policy is here:
+  <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <footer>
+    Split Me · Made in Egypt
+  </footer>
+
+</div>
+</body>
+</html>

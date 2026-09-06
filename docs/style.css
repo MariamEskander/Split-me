@@ -1,0 +1,60 @@
+/* Split Me brand: navy ground, teal accent, mint highlights, coral for alerts. */
+:root {
+  --navy: #1a1f6b;
+  --canvas: #0b0e33;
+  --surface: #141a52;
+  --teal: #00d4c4;
+  --mint: #a7f0e6;
+  --coral: #ff6b6b;
+  --text: #ffffff;
+  --muted: #9fa8dc;
+  --faint: #6c77b5;
+  --hairline: rgba(167, 240, 230, 0.14);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
+header { text-align: center; margin-bottom: 44px; }
+header img { width: 96px; height: auto; }
+h1 { font-size: 2.1rem; margin: 18px 0 6px; letter-spacing: -0.5px; }
+.tagline {
+  color: var(--teal); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase; margin: 0;
+}
+h2 { font-size: 1.15rem; margin: 38px 0 10px; }
+h3 { font-size: 0.98rem; margin: 26px 0 6px; color: var(--mint); }
+p, li { color: var(--muted); }
+p { margin: 0 0 14px; }
+ul { padding-left: 20px; margin: 0 0 16px; }
+li { margin-bottom: 7px; }
+strong { color: var(--text); font-weight: 600; }
+a { color: var(--teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.card {
+  background: var(--surface); border: 1px solid var(--hairline);
+  border-radius: 18px; padding: 22px 24px; margin: 18px 0;
+}
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+.pill {
+  display: inline-block; background: rgba(0, 212, 196, 0.16); color: var(--teal);
+  border-radius: 999px; padding: 5px 13px; font-size: 0.78rem; font-weight: 600;
+}
+.notice {
+  background: rgba(255, 107, 107, 0.12); border: 1px solid rgba(255, 107, 107, 0.35);
+  border-radius: 14px; padding: 14px 18px; color: var(--text);
+}
+.notice p { color: var(--text); }
+footer {
+  margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--hairline);
+  color: var(--faint); font-size: 0.85rem; text-align: center;
+}
+.date { color: var(--faint); font-size: 0.85rem; }
+@media (prefers-color-scheme: light) {
+  /* The brand is dark-first; keep it dark rather than inventing a light theme. */
+}

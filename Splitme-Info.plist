@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The launch screen paints the brand navy so there is no white flash
+	     before SplashView takes over. Everything else still comes from the
+	     INFOPLIST_KEY_* build settings. -->
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchNavy</string>
+	</dict>
+	<!-- The brand faces. Absent files are simply not loaded, and BrandFont
+	     falls back to SF Rounded, so the app builds either way. -->
+	<!-- Only standard HTTPS is used, which is exempt from export regulations.
+	     Declaring it here stops App Store Connect asking on every upload. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-Medium.ttf</string>
+	</array>
+</dict>
+</plist>
