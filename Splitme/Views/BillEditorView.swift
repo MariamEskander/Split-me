@@ -542,6 +542,7 @@ private struct AddItemView: View {
                 }
                 .padding(Theme.gutter)
             }
+            .keyboardDismissBar()
             .navigationTitle("Add items")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(Theme.canvas, for: .navigationBar)

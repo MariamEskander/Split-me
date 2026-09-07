@@ -141,13 +141,18 @@ extension View {
             .listRowInsets(insets)
     }
 
-    /// Applies the dark canvas behind a scrolling container, and lets a drag
-    /// put the keyboard away — the iOS-native gesture for it.
+    /// Applies the dark canvas behind a scrolling container, gives every screen
+    /// a Done button above the keyboard, and dismisses on a drag.
+    ///
+    /// `.immediately` rather than `.interactively`: the interactive variant
+    /// drags the keyboard with your finger and can end up not dismissing at
+    /// all, which reads as broken.
     func splitmeCanvas() -> some View {
         self
             .scrollContentBackground(.hidden)
-            .scrollDismissesKeyboard(.interactively)
+            .scrollDismissesKeyboard(.immediately)
             .background(Theme.canvas.ignoresSafeArea())
+            .keyboardDismissBar()
     }
 }
 

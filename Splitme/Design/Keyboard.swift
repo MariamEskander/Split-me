@@ -2,18 +2,22 @@ import SwiftUI
 import UIKit
 
 extension View {
-    /// Dismisses the keyboard when a tap lands anywhere that is not a control.
+    /// A **Done** button above the keyboard.
     ///
-    /// Attached as a *background*, so the tap target sits behind the content:
-    /// buttons, fields and rows keep receiving their own taps, and only the
-    /// empty space around them dismisses. A foreground gesture would swallow
-    /// taps or fight with a field being focused.
-    func dismissKeyboardOnBackgroundTap() -> some View {
-        background(
-            Color.clear
-                .contentShape(Rectangle())
-                .onTapGesture { KeyboardDismisser.dismiss() }
-        )
+    /// This is the only guaranteed way out for the amount and percentage
+    /// fields: they use `.decimalPad`, which has no Return key at all, so
+    /// without this there is literally no key to press. Tapping elsewhere is
+    /// not enough either — the canvas sits *behind* a full-screen scroll view,
+    /// so taps land on the content, not on the background.
+    func keyboardDismissBar() -> some View {
+        toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") { KeyboardDismisser.dismiss() }
+                    .font(Theme.label(16, weight: .semibold))
+                    .foregroundStyle(Theme.accent)
+            }
+        }
     }
 }
 
