@@ -43,6 +43,7 @@ final class GoingOutReminders: NSObject, CLLocationManagerDelegate {
         static let latitude = "splitme.reminders.home.lat"
         static let longitude = "splitme.reminders.home.lon"
         static let radius = "splitme.reminders.home.radius"
+        static let items = "splitme.reminders.items"
         static let hour = "splitme.reminders.fallback.hour"
         static let minute = "splitme.reminders.fallback.minute"
     }
@@ -154,6 +155,9 @@ final class GoingOutReminders: NSObject, CLLocationManagerDelegate {
         home = coordinate
         UserDefaults.standard.set(coordinate.latitude, forKey: Key.latitude)
         UserDefaults.standard.set(coordinate.longitude, forKey: Key.longitude)
+        // readiness moves from .needsHome to .armedByLocation, so the geofence
+        // has to be created now.
+        Task { await rescheduleFromRemembered() }
     }
 
     func clearHome() {
@@ -181,6 +185,7 @@ final class GoingOutReminders: NSObject, CLLocationManagerDelegate {
     /// Called whenever the list or a setting changes, so what is scheduled and
     /// what is on screen never drift apart.
     func reschedule(items: [String]) async {
+        UserDefaults.standard.set(items, forKey: Key.items)
         let center = UNUserNotificationCenter.current()
         center.removePendingNotificationRequests(withIdentifiers: [
             Self.requestIdentifier, Self.dailyIdentifier
@@ -227,6 +232,20 @@ final class GoingOutReminders: NSObject, CLLocationManagerDelegate {
         }
     }
 
+    /// Re-applies the schedule from the remembered list.
+    ///
+    /// Without this, the common path silently produced no geofence at all: the
+    /// toggle is flipped while location is still "when in use", which schedules
+    /// the daily fallback; the user then grants "always"; the screen switches to
+    /// "Armed", but the pending notification is still the daily one. Any change
+    /// in authorisation has to rewrite the schedule, not just the label.
+    func rescheduleFromRemembered() async {
+        await refreshStatus()
+        let items = UserDefaults.standard.stringArray(forKey: Key.items) ?? []
+        guard !items.isEmpty else { return }
+        await reschedule(items: items)
+    }
+
     /// Fires in a few seconds so the wording and actions can be checked without
     /// walking out of the house.
     func sendPreview(items: [String]) async {
@@ -252,11 +271,18 @@ final class GoingOutReminders: NSObject, CLLocationManagerDelegate {
     // MARK: CLLocationManagerDelegate
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let previous = locationStatus
         locationStatus = manager.authorizationStatus
+
         if pendingHomeRequest,
            manager.authorizationStatus == .authorizedWhenInUse
             || manager.authorizationStatus == .authorizedAlways {
             manager.requestLocation()
+        }
+
+        // Upgrading to "always" changes which trigger is correct.
+        if previous != manager.authorizationStatus {
+            Task { await rescheduleFromRemembered() }
         }
     }
 

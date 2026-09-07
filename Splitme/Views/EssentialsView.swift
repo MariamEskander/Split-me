@@ -49,6 +49,12 @@ struct EssentialsView: View {
             .onChange(of: reminders.isEnabled) { _, _ in
                 Task { await reminders.reschedule(items: activeNames) }
             }
+            .onChange(of: reminders.locationStatus) { _, _ in
+                Task { await reminders.reschedule(items: activeNames) }
+            }
+            .onChange(of: reminders.notificationStatus) { _, _ in
+                Task { await reminders.reschedule(items: activeNames) }
+            }
         }
     }
 

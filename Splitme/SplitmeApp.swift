@@ -41,6 +41,11 @@ private struct AppShell: View {
             }
         }
         .task {
+            // Permissions can change in iOS Settings while the app is closed,
+            // so the reminder is re-applied on every launch rather than only
+            // when the Essentials screen happens to be open.
+            await GoingOutReminders().rescheduleFromRemembered()
+
             #if DEBUG
             SampleData.seedIfNeeded(context)
             SampleData.dumpShareTextIfRequested(context)
