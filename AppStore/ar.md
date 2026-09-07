@@ -4,14 +4,17 @@ Add "Arabic" under App Information → Localizations, then paste these. The app
 ships Egyptian Arabic, so the copy is written that way rather than in formal
 MSA — it should read like the app sounds.
 
-## App Name — 26 / 30
+## App Name — 20 / 30
 
 ```
-سبليت مي: قسّم الفاتورة
+بيلي: قسّم الفاتورة
 ```
 
 > Arabic App Store names may use Latin script too. If you would rather keep the
-> brand in Latin: `Split Me: قسّم الفاتورة` (23).
+> brand in Latin: `Billy: قسّم الفاتورة` (20). Transliterating to بيلي reads
+> naturally in Egyptian Arabic and is searchable; the Latin form is more
+> recognisable if the brand is Latin everywhere else. Pick one and use it
+> consistently.
 
 ## Subtitle — 30 / 30
 
@@ -22,7 +25,7 @@ MSA — it should read like the app sounds.
 ## Promotional Text — 148 / 170
 
 ```
-صوّر الفاتورة وسبليت مي يحسب نصيب كل واحد بالقرش، بالضريبة والخدمة. كل حاجة على موبايلك، من غير تسجيل ولا إعلانات.
+صوّر الفاتورة وبيلي يحسب نصيب كل واحد بالقرش، بالضريبة والخدمة. كل حاجة على موبايلك، من غير تسجيل ولا إعلانات.
 ```
 
 ## Keywords — 96 / 100
@@ -34,7 +37,7 @@ MSA — it should read like the app sounds.
 ## Description
 
 ```
-سبليت مي بيقرا الفاتورة ويحسب نصيب كل واحد بالظبط — بالضريبة والخدمة — عشان محدش يزعل ومحدش يدفع زيادة.
+بيلي بيقرا الفاتورة ويحسب نصيب كل واحد بالظبط — بالضريبة والخدمة — عشان محدش يزعل ومحدش يدفع زيادة.
 
 صوّر الفاتورة. حدد مين طلب إيه. ابعت لكل واحد نصيبه.
 

@@ -7,7 +7,7 @@ import UserNotifications
 ///
 /// The reminder is delivered by the system, not by the app: a notification is
 /// registered against a circle around home with `notifyOnExit`, so it arrives
-/// even when Splitme has not been opened for days and nothing of ours is
+/// even when Billy has not been opened for days and nothing of ours is
 /// running. That is also why it needs *Always* location — a "while in use"
 /// permission cannot wake anything once you have put the phone in your pocket.
 ///

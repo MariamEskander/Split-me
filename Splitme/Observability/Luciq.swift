@@ -36,7 +36,7 @@ enum Observability {
         configureScreenshotMasking()
     }
 
-    /// Split Me sends no credentials anywhere today, but the redaction list
+    /// Billy sends no credentials anywhere today, but the redaction list
     /// costs nothing and protects against a future endpoint that does.
     private static func configureNetworkMasking() {
         let headersToMask = ["Authorization", "Cookie", "X-API-Key", "token"]

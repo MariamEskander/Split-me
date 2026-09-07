@@ -1,6 +1,6 @@
 import Foundation
 
-/// All money in Splitme is stored as an integer number of minor units (e.g. cents,
+/// All money in Billy is stored as an integer number of minor units (e.g. cents,
 /// piastres) so that repeated splitting and re-summing never drifts.
 typealias Minor = Int
 
@@ -119,7 +119,7 @@ extension String {
 }
 
 enum AppDefaults {
-    /// Splitme is built for Egypt first, so a new bill starts in pounds rather
+    /// Billy is built for Egypt first, so a new bill starts in pounds rather
     /// than whatever the device happens to be set to.
     static let currencyCode = "EGP"
 }

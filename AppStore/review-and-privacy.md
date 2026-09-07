@@ -1,6 +1,6 @@
 # App Review Information & the privacy questionnaires
 
-The two questionnaires are quick because Split Me genuinely collects nothing.
+The two questionnaires are quick because Billy collects almost nothing.
 The review notes are the part worth reading — they pre-empt the rejection this
 app is most likely to get.
 

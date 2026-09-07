@@ -239,7 +239,7 @@ enum BillSharing {
         let code = bill.currencyCode
         var out: [String] = []
 
-        out.append("\(bill.displayTitle) · Split Me")
+        out.append("\(bill.displayTitle) · Billy")
         out.append(rule)
 
         // The whole bill first: total, then how it is made up.
@@ -277,7 +277,7 @@ enum BillSharing {
     /// One person's own message — the same block, addressed to them.
     static func message(for share: PersonShare, bill: Bill) -> String {
         var out: [String] = []
-        out.append("\(bill.displayTitle) · Split Me")
+        out.append("\(bill.displayTitle) · Billy")
         out.append(rule)
         out.append(contentsOf: block(for: share, bill: bill, totalLabel: "\(share.name), you owe"))
         out.append(rule)

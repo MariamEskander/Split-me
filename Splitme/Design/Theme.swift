@@ -13,7 +13,7 @@ extension Color {
         )
     }
 
-    /// A token that resolves per appearance. Splitme is designed dark-first, so
+    /// A token that resolves per appearance. Billy is designed dark-first, so
     /// the dark value is the intended one and the light value is the adaptation.
     static func adaptive(dark: UInt32, light: UInt32, opacity: Double = 1) -> Color {
         Color(UIColor { trait in
@@ -25,7 +25,7 @@ extension Color {
 
 // MARK: - Tokens
 
-/// Split Me's brand palette.
+/// Billy's brand palette.
 ///
 ///  #00D4C4 teal    — primary action, the mark's leading half
 ///  #1A1F6B navy    — the brand ground; here it is the *raised* surface, with

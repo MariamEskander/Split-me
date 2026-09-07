@@ -3,15 +3,20 @@
 Paste each block into the matching field. Limits are noted; the counts were
 measured, not estimated.
 
-## App Name — 28 / 30
+## App Name — 22 / 30
 
 ```
-Split Me: Split Bills Fairly
+Billy: Split Bills Fairly
 ```
 
-> App Store names are globally unique. If this is taken, in order of preference:
-> `Split Me — Scan & Split Bills` (29), `Split Me: Receipt Bill Split` (28),
-> `SplitMe: Scan, Split, Settle` (28).
+> ⚠️ **"Billy" alone is almost certainly taken** — it is a common first name and
+> App Store names are effectively unique. Pairing it with what the app does is
+> both better for search and far likelier to be available. Fallbacks, in order:
+> `Billy — Scan & Split Bills` (26), `Billy: Receipt Bill Splitter` (28),
+> `Billy: Split the Bill` (21).
+>
+> Check availability in App Store Connect before committing: the name is claimed
+> when you create or rename the app record.
 
 ## Subtitle — 30 / 30
 
@@ -24,7 +29,7 @@ Scan the receipt, split fairly
 *(Editable any time without a new build — use it for offers or seasonal notes.)*
 
 ```
-Scan the receipt and Split Me works out who owes what, down to the piastre. Tax and service handled properly. Everything stays on your phone. No sign-up, no ads.
+Scan the receipt and Billy works out who owes what, down to the piastre. Tax and service handled properly. Everything stays on your phone. No sign-up, no ads.
 ```
 
 ## Keywords — 98 / 100
@@ -38,17 +43,17 @@ bill,split,receipt,scan,share,expense,friends,dinner,restaurant,tax,service,tip,
 ## Description
 
 ```
-Split Me reads your receipt and works out exactly what each person owes — including tax and service — so nobody argues and nobody gets short-changed.
+Billy reads your receipt and works out exactly what each person owes — including tax and service — so nobody argues and nobody gets short-changed.
 
 Scan the receipt. Tap who ordered what. Send everyone their share.
 
 SCANNING THAT STAYS ON YOUR PHONE
-Point your camera at the receipt and Split Me reads the items using Apple's on-device text recognition. No AI service, no server, no upload. The photo never leaves your phone and is not kept.
+Point your camera at the receipt and Billy reads the items using Apple's on-device text recognition. No AI service, no server, no upload. The photo never leaves your phone and is not kept.
 
 Because paper receipts are creased, faded and inconsistent, every scan opens a review screen first. Fix a name, correct a price, untick anything that isn't an item, add whatever was missed. Only what you confirm reaches the bill.
 
 TAX AND SERVICE, DONE PROPERLY
-Restaurants price two different ways, and Split Me supports both. If menu prices exclude tax and service, they're added to the subtotal and split in proportion to what each person ordered — so the person who had the expensive main pays more of the service, which is only fair. If prices already include them, nothing is added twice.
+Restaurants price two different ways, and Billy supports both. If menu prices exclude tax and service, they're added to the subtotal and split in proportion to what each person ordered — so the person who had the expensive main pays more of the service, which is only fair. If prices already include them, nothing is added twice.
 
 SPLIT HOWEVER IT ACTUALLY HAPPENED
 Assign an item to one person, to a few who shared it, or to everyone. Anything left unassigned is split equally and flagged, so you never accidentally leave something out. Quantities, discounts, tips and delivery are all handled.

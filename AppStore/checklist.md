@@ -1,4 +1,4 @@
-# Split Me — release checklist
+# Billy — release checklist
 
 Status as of 6 September 2026.
 
@@ -8,7 +8,7 @@ Status as of 6 September 2026.
 - [x] iPhone only — `TARGETED_DEVICE_FAMILY = 1`. Previously declared iPad and
       Vision Pro, which would have forced iPad screenshots and iPad review
 - [x] `SUPPORTED_PLATFORMS` narrowed to iOS
-- [x] Home-screen name `Split Me` via `CFBundleDisplayName`
+- [x] Home-screen name `Billy` via `CFBundleDisplayName`
 - [x] `ITSAppUsesNonExemptEncryption = false`
 - [x] `PrivacyInfo.xcprivacy` — no tracking, no collected data, UserDefaults
       declared with reason CA92.1
@@ -33,8 +33,10 @@ Status as of 6 September 2026.
       distributed on the current free personal team
 - [ ] **Enable GitHub Pages** on Split-me-docs (Settings → Pages → main, root)
       and confirm both URLs load
-- [ ] **Check the app name is free** on the App Store; fallbacks are listed in
-      `en.md`
+- [ ] **Check "Billy" is free** on the App Store — it is a common first name, so
+      expect it to be taken; fallbacks are listed in `en.md`
+- [ ] **The logo is a stylised "S"** for Split. It no longer matches the name —
+      decide whether the mark changes too
 - [ ] **Screenshots** — 6.9" display (1320×2868), 3 to 10 images. Suggested:
       Bills list, Items with people assigned, Shares, Currency, Essentials.
       Add an Arabic set too if you localize the listing

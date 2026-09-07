@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// The languages Splitme ships in. English and Arabic, switched inside the app
+/// The languages Billy ships in. English and Arabic, switched inside the app
 /// rather than only through iOS Settings, because people split bills with
 /// friends who read different scripts and expect to flip in one tap.
 enum AppLanguage: String, CaseIterable, Identifiable {

@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// The Split Me mark, as supplied by the brand: two interlocking lobes with
+/// The Billy mark, as supplied by the brand: two interlocking lobes with
 /// gloss and gradient modelling that would be pointless to approximate in code.
 ///
 /// Two variants ship in `Assets.xcassets`:
@@ -17,7 +17,7 @@ struct BrandLogo: View {
             .resizable()
             .scaledToFit()
             .frame(width: size)
-            .accessibilityLabel("Split Me")
+            .accessibilityLabel("Billy")
     }
 }
 
@@ -52,7 +52,7 @@ struct BrandLockup: View {
             }
 
             VStack(spacing: 10) {
-                Text(verbatim: "Split Me")
+                Text(verbatim: "Billy")
                     .font(BrandFont.heading(markSize * 0.44, weight: .semibold))
                     .foregroundStyle(onNavy ? Brand.white : Brand.navy)
                     .opacity(appeared ? 1 : 0)

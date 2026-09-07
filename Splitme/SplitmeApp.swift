@@ -81,7 +81,7 @@ final class NotificationCoordinator: NSObject, UNUserNotificationCenterDelegate 
         try? await center.add(request)
     }
 
-    /// Show it even with Splitme open — you may be on your way out with the app
+    /// Show it even with Billy open — you may be on your way out with the app
     /// in your hand.
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification) async
